@@ -1,5 +1,6 @@
 const path = require('path')
 const express = require('express')
+const router = express.Router()
 
 //middleware
 router.use('/', (req, res, next) => {
@@ -11,7 +12,7 @@ router.use('/', (req, res, next) => {
 
 
 router.get('/', (req, res, next) => {
-  let indexPagePath = path.join(__dirname, '/../../../client/dist/index.html')
+  let indexPagePath = path.join(__dirname, './../../client/dist/index.html')
   res.sendFile(indexPagePath)
 })
 

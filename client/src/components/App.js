@@ -6,9 +6,14 @@ import {
   Switch,
   Redirect,
 } from 'react-router-dom'
-import ToDo from './projects/ToDo/ToDo'
+import styled from 'styled-components'
+
+
 import NotFound from './NotFound'
 import Header from './Header'
+import Home from './Home'
+import Sites from './Sites'
+import ToDo from './projects/ToDo/ToDo'
 
 
 class App extends Component {
@@ -21,7 +26,9 @@ class App extends Component {
       <div className={this.props.className}>
         <Header />
         <Switch>
-          <Route path='/' component={ToDo} />
+          <Route path='/home' exact component={Home} />
+          <Route path='/sites' exact component={Sites} />
+          <Route path='/projects' exact component={ToDo} />
           <Route component={NotFound} />
         </Switch>
       </div>
@@ -30,4 +37,9 @@ class App extends Component {
 }
 
 
-export default App;
+const StyledApp = styled(App)`
+
+`
+
+
+export default StyledApp;
