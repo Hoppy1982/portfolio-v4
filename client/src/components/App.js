@@ -13,7 +13,9 @@ import NotFound from './NotFound'
 import Header from './Header'
 import Home from './Home'
 import Sites from './Sites'
+//remove ToDo component once it's working in ProjectNavAndView
 import ToDo from './projects/ToDo/ToDo'
+import ProjectNavAndView from './ProjectNavAndView/ProjectNavAndView'
 
 
 class App extends Component {
@@ -26,10 +28,9 @@ class App extends Component {
       <div className={this.props.className}>
         <Header />
         <Switch>
-          <Route path='/home' exact component={Home} />
-          <Route path='/sites' exact component={Sites} />
-          <Route path='/projects' exact component={ToDo} />
-          <Route component={NotFound} />
+          <Route exact path='/home' component={Home} />
+          <Route exact path='/sites' component={Sites} />
+          <Route path='/projects' component={ProjectNavAndView} />
         </Switch>
       </div>
     )
