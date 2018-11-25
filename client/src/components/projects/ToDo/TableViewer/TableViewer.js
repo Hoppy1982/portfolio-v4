@@ -103,7 +103,6 @@ const StyledTableViewer = styled(TableViewer)`
     flex-basis: 600px;
     text-align: center;
     font-size: 16px;
-    line-height: 4px;
   }
 `
 

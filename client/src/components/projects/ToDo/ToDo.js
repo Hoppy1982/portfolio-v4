@@ -84,6 +84,7 @@ const StyledToDo = styled(ToDo)`
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  margin-top: 24px;
   color: #000;
   border: solid black 8px;
   border-top-left-radius: 1em;
