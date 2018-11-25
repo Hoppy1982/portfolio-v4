@@ -166,6 +166,7 @@ const StyledProjectOne = styled(ProjectOne)`
   .projectHeading {
     text-align: center;
     padding: 1em;
+    font-family: lato;
   }
 
   .projectLayout {
