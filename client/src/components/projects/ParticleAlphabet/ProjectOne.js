@@ -197,6 +197,7 @@ const StyledProjectOne = styled(ProjectOne)`
   }
 
   .controls__inputContainer {
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: row;
