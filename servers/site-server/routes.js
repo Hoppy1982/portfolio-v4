@@ -11,7 +11,7 @@ router.use('/', (req, res, next) => {
 })
 
 
-router.get('/', (req, res, next) => {
+router.get('*', (req, res, next) => {
   console.log(`GET request rx'd..`)
   let indexPagePath = path.join(__dirname, './../../client/dist/index.html')
   console.log(indexPagePath)
