@@ -8,9 +8,10 @@ const server = express()
 
 server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({extended: false}))
-server.use( express.static(__dirname + '/../../client/dist') )
+server.use(  express.static( path.join(__dirname, '/../../client/dist') )  )
 //temp while figure out webpack image loader
-server.use( express.static(__dirname + '/../../client/src') )
+//server.use(  express.static( path.join(__dirname, '/../../client/src') )  )
+
 server.use('/', routes)
 
 server.listen(SERVER_CONFIG.PORT)

@@ -21,7 +21,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'client/dist')
+    path: path.join(__dirname, 'client/dist')
   },
   module: {
     rules: [
