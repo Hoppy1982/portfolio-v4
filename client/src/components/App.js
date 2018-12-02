@@ -41,7 +41,7 @@ class App extends Component {
 
 
 const StyledApp = styled(App)`
-  @font-face {
+   @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;

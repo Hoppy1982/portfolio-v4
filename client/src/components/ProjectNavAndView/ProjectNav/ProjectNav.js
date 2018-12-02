@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom'
 import styled from 'styled-components'
+import commonStyles from '../../../common-styles'
 
 
 class ProjectNav extends Component {
@@ -12,9 +13,9 @@ class ProjectNav extends Component {
   render() {
     return(
       <nav className={this.props.className}>
-        <NavLink className='navLink firstNavLink' to='/projects/to-do-app'>ToDo App</NavLink>
         <NavLink className='navLink' to='/projects/particle-alphabet'>Particle Alphabet</NavLink>
         <NavLink className='navLink' to='/projects/world-bank-api'>Energy Data</NavLink>
+        <NavLink className='navLink firstNavLink' to='/projects/to-do-app'>ToDo App</NavLink>
       </nav>
     )
   }
@@ -22,7 +23,9 @@ class ProjectNav extends Component {
 
 
 const StyledProjectNav = styled(ProjectNav)`
-  border: solid #222 6px;
+  ${commonStyles.defaultStyles}
+
+  border: solid ${commonStyles.colorOne} 6px;
   display: flex;
   box-sizing: content-box;
   height: 6em;
@@ -35,7 +38,7 @@ const StyledProjectNav = styled(ProjectNav)`
   .navLink {
     flex: 0 0 auto;
     box-sizing: border-box;
-    border: solid #fff;
+    border: solid #9cafce;
     border-width: 4px 4px 4px 0px;
     background-color: #222;
     color: #fff;
@@ -45,7 +48,7 @@ const StyledProjectNav = styled(ProjectNav)`
     justify-content: center;
     text-decoration: none;
     font-size: 1.2em;
-    transition: font-size 0.5s;
+    transition: all 0.5s;
   }
 
   .firstNavLink {
@@ -54,6 +57,7 @@ const StyledProjectNav = styled(ProjectNav)`
 
   .navLink:hover {
     background-color: #444;
+    color: #bbb;
     font-size: 1.4em;
   }
 

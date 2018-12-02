@@ -143,6 +143,7 @@ const StyledProjectTwoCharts = styled(ProjectTwoCharts)`
   box-sizing: border-box;
 
   .chart {
+    background-color: #fff;
     border: solid #222 2px;
     border-top-right-radius: 24px;
     width: 94%;

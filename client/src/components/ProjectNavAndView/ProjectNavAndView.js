@@ -9,6 +9,7 @@ import ProjectNav from './ProjectNav/ProjectNav'
 import ToDo from './../projects/ToDo/ToDo'
 import ProjectOne from './../projects/ParticleAlphabet/ProjectOne'
 import ProjectTwo from './../projects/WorldBankAPI/ProjectTwo'
+import ToDoContainer from './../projects/ToDo/ToDoContainer'
 
 
 class ProjectNavAndView extends Component {
@@ -18,16 +19,13 @@ class ProjectNavAndView extends Component {
   }
 
   render() {
-    console.log('ProjectNavAndView.render()')
-    console.log(`match.path: ${this.props.match.path}`)
-    console.log(`match.url: ${this.props.match.url}`)
     return(
       <div className={this.props.className}>
         <ProjectNav />
         <Switch>
-          <Route path={`${this.props.match.path}/to-do-app`} component={ToDo}/>
-          <Route path={`${this.props.match.path}/particle-alphabet`} component={ProjectOne}/>
-          <Route path={`${this.props.match.path}/world-bank-api`} component={ProjectTwo}/>
+          <Route path={`${this.props.match.path}/to-do-app`} component={ToDoContainer}/>
+          <Route path={`${this.props.match.path}/particle-alphabet`} component={ProjectOne} />
+          <Route path={`${this.props.match.path}/world-bank-api`} component={ProjectTwo} />
         </Switch>
       </div>
     )

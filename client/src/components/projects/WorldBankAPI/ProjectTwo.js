@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ProjectTwoCharts from './ProjectTwoCharts'
 import styled from 'styled-components'
+import commonStyles from '../../../common-styles'
 
 
 class ProjectTwo extends Component {
@@ -377,9 +378,14 @@ class ProjectTwo extends Component {
 
 
 const StyledProjectTwo = styled(ProjectTwo)`
-  box-sizing: border-box;
+  ${commonStyles.defaultStyles}
+
   width: 100%;
-  background: #ddd;
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  border-top: solid ${commonStyles.colorOne} 8px;
+  background-color: #59c66d;
 
   h2 {
     padding-top: 1.5em;
@@ -518,7 +524,7 @@ const StyledProjectTwo = styled(ProjectTwo)`
     list-style: none;
     font-weight: 600;
   }
-  
+
   @media screen and (min-width: 480px) {
     .ProjectTwoControlsLayoutContainer {
       flex-direction: row;

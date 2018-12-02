@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ParticleAlphabetOne from './ProjectOneParticleAlphabet'
 import styled from 'styled-components'
+import commonStyles from '../../../common-styles'
 
 
 class ProjectOne extends Component {
@@ -155,8 +156,15 @@ class ProjectOne extends Component {
 
 
 const StyledProjectOne = styled(ProjectOne)`
-  box-sizing: border-box;
-  background: #fff;
+  ${commonStyles.defaultStyles}
+
+  width: 100%;
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  border-top: solid ${commonStyles.colorOne} 8px;
+  background-color: #d6a228;
+
   display: flex;
   align-items: center;
   flex-direction: column;
