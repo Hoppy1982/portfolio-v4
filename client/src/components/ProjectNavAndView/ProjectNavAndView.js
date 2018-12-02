@@ -37,9 +37,12 @@ class ProjectNavAndView extends Component {
 
 const StyledProjectNavAndView = styled(ProjectNavAndView)`
   width: 100%;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  padding-top: 2em;
 `
 
 export default StyledProjectNavAndView

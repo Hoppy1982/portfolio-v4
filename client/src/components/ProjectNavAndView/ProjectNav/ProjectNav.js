@@ -11,77 +11,54 @@ class ProjectNav extends Component {
 
   render() {
     return(
-      <div className={this.props.className}>
-        <div className='leftButton button'>
-          <p>left</p>
-        </div>
-        <div className='rightButton button'>
-          <p>right</p>
-        </div>
-        <nav>
-          <NavLink to='/projects/to-do-app'>ToDo App</NavLink>
-          <NavLink to='/projects/particle-alphabet'>Particle Alphabet</NavLink>
-          <NavLink to='/projects/world-bank-api'>Energy Data</NavLink>
-        </nav>
-      </div>
+      <nav className={this.props.className}>
+        <NavLink className='navLink firstNavLink' to='/projects/to-do-app'>ToDo App</NavLink>
+        <NavLink className='navLink' to='/projects/particle-alphabet'>Particle Alphabet</NavLink>
+        <NavLink className='navLink' to='/projects/world-bank-api'>Energy Data</NavLink>
+      </nav>
     )
   }
 }
 
 
 const StyledProjectNav = styled(ProjectNav)`
-  border: solid #222 3px;
+  border: solid #222 6px;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-
-  width: 100%;
+  box-sizing: content-box;
   height: 6em;
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+  flex: 0 0 auto;
+  overflow-x: scroll;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: calc( 100% - 12px );
 
-  .button {
+  .navLink {
+    flex: 0 0 auto;
     box-sizing: border-box;
-    border: solid red 2px;
-    width: 50%;
+    border: solid #fff;
+    border-width: 4px 4px 4px 0px;
+    background-color: #222;
+    color: #fff;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: font-size 0.5s;
   }
 
-  .leftButton {
-    order: 1;
+  .firstNavLink {
+    border-left-width: 4px;
   }
 
-  .rightButton {
-    order: 2;
+  .navLink:hover {
+    background-color: #444;
+    font-size: 1.4em;
   }
-
-  nav {
-    box-sizing: border-box;
-    flex: 1 1 auto;
-    order: 3;
-    border: solid green 2px;
-  }
-
 
   @media only screen and (min-width: 480px) {
-    flex-wrap: nowrap;
-    max-width: 680px;
-
-    .button {
-
-    }
-
-    .leftButton {
-      order: 1;
-    }
-
-    .rightButton {
-      order: 3;
-    }
-
-    nav {
-      order: 2;
-    }
+    max-width: 480px;
   }
 `
 
