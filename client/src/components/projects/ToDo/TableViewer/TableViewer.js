@@ -15,6 +15,7 @@ class TableViewer extends Component {
     this.handleTableSelect = this.handleTableSelect.bind(this)
 
     this.BASEURL = `http://localhost:3001/`
+    this.LIVEURL = 'https://www.todo-app.markhopcraft.co.uk/'
   }
 
 
@@ -29,7 +30,7 @@ class TableViewer extends Component {
       }
     }
 
-    fetch(`${this.BASEURL}api/table/${tableName}/`, OPTIONS)
+    fetch(`${this.LIVEURL}api/table/${tableName}/`, OPTIONS)
       .then(res => {
         return res.json()
       })
