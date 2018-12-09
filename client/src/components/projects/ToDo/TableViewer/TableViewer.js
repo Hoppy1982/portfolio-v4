@@ -14,7 +14,7 @@ class TableViewer extends Component {
     this.getTableRows = this.getTableRows.bind(this)
     this.handleTableSelect = this.handleTableSelect.bind(this)
 
-    this.BASEURL = `http://localhost:3002/`
+    this.BASEURL = `http://localhost:3001/`
   }
 
 

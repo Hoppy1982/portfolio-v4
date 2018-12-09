@@ -14,7 +14,7 @@ class NewTaskForm extends Component {
       category: '1'
     }
 
-    this.BASEURL = `http://localhost:3002/`
+    this.BASEURL = `http://localhost:3001/`
 
     this.handleTaskNameInput = this.handleTaskNameInput.bind(this)
     this.handleTaskDescInput = this.handleTaskDescInput.bind(this)

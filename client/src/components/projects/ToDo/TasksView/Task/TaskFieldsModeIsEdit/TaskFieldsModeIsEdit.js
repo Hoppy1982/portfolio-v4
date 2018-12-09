@@ -29,7 +29,7 @@ class TaskFieldsModeIsEdit extends Component {
       category: ''
     }
 
-    this.BASEURL = `http://localhost:3002/`
+    this.BASEURL = `http://localhost:3001/`
 
     this.task_id = this.props.task_id
     this.task_name = this.props.task_name

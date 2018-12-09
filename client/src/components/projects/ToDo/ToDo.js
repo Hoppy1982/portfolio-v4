@@ -14,7 +14,7 @@ class ToDo extends Component {
       rows: []
     }
 
-    this.BASEURL = `http://localhost:3002/`
+    this.BASEURL = `http://localhost:3001/`
     this.getData = this.getData.bind(this)
   }
 

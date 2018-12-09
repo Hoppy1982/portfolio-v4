@@ -9,7 +9,7 @@ class DelButton extends Component {
     this.getData = this.props.getData
     this.state = {}
     this.handleDel = this.handleDel.bind(this)
-    this.BASEURL = `http://localhost:3002/`
+    this.BASEURL = `http://localhost:3001/`
   }
 
   handleDel(event) {
