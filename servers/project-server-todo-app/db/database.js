@@ -2,12 +2,23 @@ const mysql = require('mysql')
 const util = require('util')
 
 //--pool creation
+
+/* old version of db incase everything goes to shit
 const pool = mysql.createPool({
   connectionLimit: 10,
   host     : 'localhost',
   user     : 'to-do-list--user',
   password : 'user',
   database : 'to_do_list'
+})
+*/
+
+const pool = mysql.createPool({
+  connectionLimit: 10,
+  host     : 'localhost',
+  user     : 'to_do_app_user',
+  password : 'to_do_app_user',
+  database : 'to_do_app'
 })
 pool.promisifiedQuery = util.promisify(pool.query)
 
