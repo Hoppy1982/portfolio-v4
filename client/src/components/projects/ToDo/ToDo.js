@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import commonStyles from '../../../common-styles'
+import constants from '../../../constants'
 import TasksView from './TasksView/TasksView'
 import TasksNew from './TasksNew/TasksNew'
 import TableViewer from './TableViewer/TableViewer'
-import commonStyles from '../../../common-styles'
 
 
 class ToDo extends Component {
@@ -14,7 +15,6 @@ class ToDo extends Component {
       rows: []
     }
 
-    this.BASEURL = `http://localhost:3001/`
     this.getData = this.getData.bind(this)
   }
 
@@ -46,7 +46,7 @@ class ToDo extends Component {
       }
     }
 
-    fetch(`${this.BASEURL}api/todo/`, OPTIONS)
+    fetch(`${constants.BASE_URL}api/todo/`, OPTIONS)
       .then(res => {
         return res.json()
       })
