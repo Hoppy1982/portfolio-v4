@@ -36,8 +36,6 @@ class ToDo extends Component {
 
 
   getData() {
-    console.log('getData called..')
-
     const OPTIONS = {
       method: 'GET',
       mode: 'cors',

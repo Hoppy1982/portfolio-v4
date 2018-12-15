@@ -28,9 +28,6 @@ class Task extends Component {
 
 
   render() {
-    console.log('render()..')
-    console.log(this.props.task_name)
-
     let taskFields
 
     if (this.state.mode === 'view') {

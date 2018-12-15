@@ -8,15 +8,25 @@ class TableViewer extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      base_url: 'empty',
       tableName: '',
       rows: []
     }
     this.getTableRows = this.getTableRows.bind(this)
     this.handleTableSelect = this.handleTableSelect.bind(this)
-
-    this.BASEURL = `http://localhost:3001/`
-    this.LIVEURL = 'https://www.todo-app.markhopcraft.co.uk/'
   }
+
+
+  componentDidMount() {
+    if (process.env.NODE_ENV == 'development') {
+      this.setState({base_url: `http://localhost:3001/`})
+    }
+    if (process.env.NODE_ENV == 'production') {
+      this.setState({base_url: 'https://www.todo-app.markhopcraft.co.uk/'})
+    }
+    console.log(`base_url: ${this.state.base_url}`)//seems setState is async??
+  }
+
 
 
   getTableRows(tableName) {
@@ -30,7 +40,8 @@ class TableViewer extends Component {
       }
     }
 
-    fetch(`${this.LIVEURL}api/table/${tableName}/`, OPTIONS)
+
+    fetch(`${this.state.base_url}api/table/${tableName}/`, OPTIONS)
       .then(res => {
         return res.json()
       })

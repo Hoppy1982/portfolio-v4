@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
@@ -13,10 +14,15 @@ module.exports = {
     historyApiFallback: true
   },
   plugins: [
-    new CleanWebpackPlugin(['client/dist/*']),
+    new CleanWebpackPlugin([
+      'client/dist/*'
+    ]),
     new HtmlWebpackPlugin({
       template: './client/src/index.html',
       filename: './index.html'
+    }),
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'production'//defaults to process.env.NODE_ENV being equal to 'localhost' if no environment variable for NODE_ENV exists
     })
   ],
   output: {
