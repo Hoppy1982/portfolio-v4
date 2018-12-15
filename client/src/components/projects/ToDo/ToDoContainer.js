@@ -24,6 +24,7 @@ class ToDoContainer extends Component {
 const StyledToDoContainer = styled(ToDoContainer)`
   ${commonStyles.defaultStyles}
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   align-items: center;
   width: 100%;
