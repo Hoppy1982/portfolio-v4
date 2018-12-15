@@ -90,9 +90,12 @@ const StyledToDo = styled(ToDo)`
     max-width: 640px;
   }
 
-  @media screen and (max-device-width: 640px) {
-    width: 100%;
-  }
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 640px) {
+      width: 100%;
+      font-size: 3em;
+    }
 `
 
 
