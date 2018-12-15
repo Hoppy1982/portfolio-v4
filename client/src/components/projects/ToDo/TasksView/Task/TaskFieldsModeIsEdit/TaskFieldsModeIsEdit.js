@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import constants from '../../../../../../constants'
 
 //Converting these in the frontend like this sucks as will break if db table fields change
 const PROGRESSES = {
@@ -28,8 +29,6 @@ class TaskFieldsModeIsEdit extends Component {
       progress: '',
       category: ''
     }
-
-    this.BASEURL = `http://localhost:3001/`
 
     this.task_id = this.props.task_id
     this.task_name = this.props.task_name
@@ -114,7 +113,7 @@ class TaskFieldsModeIsEdit extends Component {
       body: JSON.stringify(FORM_DATA)
     }
 
-    fetch(`${this.BASEURL}api/todo/`, OPTIONS)
+    fetch(`${constants.BASE_URL}api/todo/`, OPTIONS)
       .then(res => {
         console.log(res)
         this.props.getData()

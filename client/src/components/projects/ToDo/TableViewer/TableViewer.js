@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import constants from '../../../../constants'
 import NoTableSelected from './NoTableSelected/NoTableSelected'
 import RenderRawTable from './RenderRawTable/RenderRawTable'
 import TableSelect from './TableSelect/TableSelect'
@@ -8,25 +9,12 @@ class TableViewer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      base_url: 'empty',
       tableName: '',
       rows: []
     }
     this.getTableRows = this.getTableRows.bind(this)
     this.handleTableSelect = this.handleTableSelect.bind(this)
   }
-
-
-  componentDidMount() {
-    if (process.env.NODE_ENV == 'development') {
-      this.setState({base_url: `http://localhost:3001/`})
-    }
-    if (process.env.NODE_ENV == 'production') {
-      this.setState({base_url: 'https://www.todo-app.markhopcraft.co.uk/'})
-    }
-    console.log(`base_url: ${this.state.base_url}`)//seems setState is async??
-  }
-
 
 
   getTableRows(tableName) {
@@ -41,7 +29,7 @@ class TableViewer extends Component {
     }
 
 
-    fetch(`${this.state.base_url}api/table/${tableName}/`, OPTIONS)
+    fetch(`${constants.BASE_URL}api/table/${tableName}/`, OPTIONS)
       .then(res => {
         return res.json()
       })

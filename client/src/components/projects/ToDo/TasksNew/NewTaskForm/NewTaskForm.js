@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import constants from '../../../../../constants'
 
 
 class NewTaskForm extends Component {
@@ -13,8 +14,6 @@ class NewTaskForm extends Component {
       progress: '1',
       category: '1'
     }
-
-    this.BASEURL = `http://localhost:3001/`
 
     this.handleTaskNameInput = this.handleTaskNameInput.bind(this)
     this.handleTaskDescInput = this.handleTaskDescInput.bind(this)
@@ -76,7 +75,7 @@ class NewTaskForm extends Component {
       body: JSON.stringify(FORM_DATA)
     }
 
-    fetch(`${this.BASEURL}api/todo/`, OPTIONS)
+    fetch(`${constants.BASE_URL}api/todo/`, OPTIONS)
       .then(res => {
         console.log(res)
         this.props.getData()

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import constants from '../../../../../../constants'
 
 
 class DelButton extends Component {
@@ -9,7 +10,6 @@ class DelButton extends Component {
     this.getData = this.props.getData
     this.state = {}
     this.handleDel = this.handleDel.bind(this)
-    this.BASEURL = `http://localhost:3001/`
   }
 
   handleDel(event) {
@@ -26,7 +26,7 @@ class DelButton extends Component {
       body: JSON.stringify(delData)
     }
 
-    fetch(`${this.BASEURL}api/todo/`, OPTIONS)
+    fetch(`${constants.BASE_URL}api/todo/`, OPTIONS)
       .then(res => {
         return res.json()
       })
