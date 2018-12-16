@@ -93,8 +93,9 @@ const StyledToDo = styled(ToDo)`
   @media only screen
     and (min-device-width: 320px)
     and (max-device-width: 640px) {
+      max-width: 100%;
       width: 100%;
-      font-size: 3em;
+      font-size: 2em;
     }
 `
 
