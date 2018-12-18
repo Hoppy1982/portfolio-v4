@@ -37,13 +37,13 @@ const StyledToDoProjectDesc = styled(ToDoProjectDesc)`
   h3 {
     margin: ${commonStyles.sideMarginOne};
     text-align: left;
-    font-size: calc(1.5em + 1vw);
+    font-size: calc(1.2em + 0.5vw);
   }
 
   p {
     margin: ${commonStyles.sideMarginOne};
     text-align: left;
-    font-size: calc(1.2em + 1vw);
+    font-size: calc(1.2em + 0.5vw);
   }
 
   //--------------------------------
@@ -52,7 +52,7 @@ const StyledToDoProjectDesc = styled(ToDoProjectDesc)`
   @media only screen
     and (min-device-width: 1200px)
     and (min-width: 1200px) {
-      border: solid red 12px;
+      flex: 1 1 400px;
     }
 `
 

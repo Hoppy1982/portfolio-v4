@@ -37,9 +37,18 @@ const StyledToDoContainer = styled(ToDoContainer)`
   background-color: #267;
 
   h2 {
+    flex: 0 0 100%;
     padding-top: 1.5em;
     text-align: center;
   }
+
+  @media only screen
+    and (min-device-width: 1200px)
+    and (min-width: 1200px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
 `
 
 export default StyledToDoContainer

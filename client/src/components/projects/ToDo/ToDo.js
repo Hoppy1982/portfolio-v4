@@ -85,17 +85,20 @@ const StyledToDo = styled(ToDo)`
   flex-direction: column;
   align-items: center;
   background-color: #fff;
+  font-size: calc(0.8em + 0.5vw);
 
-  @media only screen and (min-width: 480px) {
-    max-width: 640px;
-  }
 
   @media only screen
-    and (min-device-width: 320px)
-    and (max-device-width: 640px) {
-      max-width: 100%;
-      width: 100%;
-      font-size: 2em;
+    and (min-device-width: 640px)
+    and (min-width: 640px) {
+      max-width: 640px;
+    }
+
+  @media only screen
+    and (min-device-width: 1200px)
+    and (min-width: 1200px) {
+      margin-top: 6em;
+      margin-right: 16px;
     }
 `
 
