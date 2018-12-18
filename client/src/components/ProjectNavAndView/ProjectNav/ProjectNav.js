@@ -47,7 +47,7 @@ const StyledProjectNav = styled(ProjectNav)`
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: calc(0.8em + 1vw);
+    font-size: calc(1.2em + 0.5vw);
     transition: all 0.5s;
   }
 
