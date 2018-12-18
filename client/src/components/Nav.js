@@ -9,8 +9,8 @@ class Nav extends Component {
     return(
       <nav className={this.props.className}>
         <NavLink to='/home' activeClassName='active' exact={true} className='navbar__link'>Home</NavLink>
-        <NavLink to='/projects' activeClassName='active' className='navbar__link'>Projects (int)</NavLink>
-        <NavLink to='/sites' activeClassName='active' className='navbar__link'>Projects (ext)</NavLink>
+        <NavLink to='/projects' activeClassName='active' className='navbar__link'>Projects</NavLink>
+        <NavLink to='/sites' activeClassName='active' className='navbar__link'>Sites & Links</NavLink>
       </nav>
     )
   }

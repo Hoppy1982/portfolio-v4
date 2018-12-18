@@ -31,6 +31,7 @@ class App extends Component {
             <Route exact path='/home' component={Home} />
             <Route exact path='/sites' component={Sites} />
             <Route path='/projects' component={ProjectNavAndView} />
+            <Route exact path='/' component={Home} />
           </Switch>
         </main>
         <Footer />
