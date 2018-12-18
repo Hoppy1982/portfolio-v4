@@ -73,7 +73,7 @@ const StyledToDo = styled(ToDo)`
   align-items: center;
   justify-content: center;
 
-  width: 100%;
+  width: calc(100% - ${commonStyles.sideMarginOne} - ${commonStyles.sideMarginOne});
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;

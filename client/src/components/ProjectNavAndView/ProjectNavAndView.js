@@ -34,6 +34,7 @@ class ProjectNavAndView extends Component {
 
 
 const StyledProjectNavAndView = styled(ProjectNavAndView)`
+  box-sizing: border-box;
   width: 100%;
   flex: 1 1 auto;
   display: flex;

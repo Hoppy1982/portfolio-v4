@@ -30,24 +30,24 @@ const StyledProjectNav = styled(ProjectNav)`
   box-sizing: content-box;
   height: 6em;
   flex: 0 0 auto;
-  overflow-x: scroll;
+  overflow-x: auto;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: calc( 100% - 12px );
+  width: calc( 100% - 12px - ${commonStyles.sideMarginOne} - ${commonStyles.sideMarginOne});
+  max-width: ${commonStyles.maxWidthOne};
 
   .navLink {
-    flex: 0 0 auto;
+    flex: 1 0 180px;
     box-sizing: border-box;
     border: solid #9cafce;
     border-width: 4px 4px 4px 0px;
     background-color: #222;
     color: #fff;
-    width: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: calc(0.8em + 1vw);
     transition: all 0.5s;
   }
 
@@ -62,7 +62,7 @@ const StyledProjectNav = styled(ProjectNav)`
   }
 
   @media only screen and (min-width: 480px) {
-    max-width: 480px;
+    //max-width: 480px;
   }
 `
 

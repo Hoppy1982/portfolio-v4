@@ -28,30 +28,31 @@ function ToDoProjectDesc(props) {
 
 
 const StyledToDoProjectDesc = styled(ToDoProjectDesc)`
+  //--------------------------------
   //Mobile or small window (default)
+
   font-size: 16px;
   margin-top: 1.5em;
 
   h3 {
-    margin: 1em;
+    margin: ${commonStyles.sideMarginOne};
     text-align: left;
-    font-size: 1.7em;
+    font-size: calc(1.5em + 1vw);
   }
 
   p {
-    margin: 1em;
+    margin: ${commonStyles.sideMarginOne};
     text-align: left;
-    font-size: 5vw;
+    font-size: calc(1.2em + 1vw);
   }
 
+  //--------------------------------
   //Desktop & not small window
+
   @media only screen
     and (min-device-width: 1200px)
     and (min-width: 1200px) {
       border: solid red 12px;
-      p {
-        font-size: 2vw;
-      }
     }
 `
 

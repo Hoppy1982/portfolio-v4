@@ -3,6 +3,7 @@ import {
   NavLink
 } from 'react-router-dom'
 import styled from 'styled-components'
+import commonStyles from '../common-styles'
 
 class Nav extends Component {
   render() {
@@ -10,7 +11,7 @@ class Nav extends Component {
       <nav className={this.props.className}>
         <NavLink to='/home' activeClassName='active' exact={true} className='navbar__link'>Home</NavLink>
         <NavLink to='/projects' activeClassName='active' className='navbar__link'>Projects</NavLink>
-        <NavLink to='/sites' activeClassName='active' className='navbar__link'>Sites & Links</NavLink>
+        <NavLink to='/sites' activeClassName='active' className='navbar__link'>Links</NavLink>
       </nav>
     )
   }
@@ -19,7 +20,7 @@ class Nav extends Component {
 
 const StyledNav = styled(Nav)`
   box-sizing: border-box;
-  background: #222;
+  background: ${commonStyles.colorOne};
   width: 100%;
   margin-top: 2em;
   display: flex;
@@ -34,11 +35,12 @@ const StyledNav = styled(Nav)`
     flex: 0 1 auto;
     list-style: none;
     height: 2em;
+    font-size: calc(0.8em + 1vw);
     line-height: 2em;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: ${commonStyles.sideMarginOne};
+    margin-right: ${commonStyles.sideMarginOne};
     background: #ddd;
-    color: #222;
+    color: ${commonStyles.colorOne};
     font-weight: 600;
     width: 10em;
     text-align: center;

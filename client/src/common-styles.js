@@ -7,7 +7,9 @@ const styles = {
     margin: 0px;
     padding: 0px;
   `,
-  colorOne: '#222'
+  colorOne: '#222',
+  sideMarginOne: '16px',
+  maxWidthOne: '800px'
 }
 
 
