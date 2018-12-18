@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import ToDo from './ToDo'
+import ToDoProjectDesc from './ToDoProjectDesc'
 import commonStyles from '../../../common-styles'
 
 
@@ -13,7 +14,8 @@ class ToDoContainer extends Component {
   render() {
     return(
       <div className={this.props.className}>
-        <h1>To Do App</h1>
+        <h2>To Do App With Persistant Storage</h2>
+        <ToDoProjectDesc />
         <ToDo />
       </div>
     )
@@ -33,6 +35,11 @@ const StyledToDoContainer = styled(ToDoContainer)`
   padding-bottom: 2em;
   border-top: solid ${commonStyles.colorOne} 8px;
   background-color: #267;
+
+  h2 {
+    padding-top: 1.5em;
+    text-align: center;
+  }
 `
 
 export default StyledToDoContainer

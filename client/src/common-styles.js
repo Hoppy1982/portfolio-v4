@@ -1,3 +1,5 @@
+//this method isn't perfect as can't use media queries here, look into global styles
+
 const styles = {
   defaultStyles: `
     font-family: lato;

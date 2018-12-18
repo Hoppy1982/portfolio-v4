@@ -474,7 +474,7 @@ const StyledProjectTwo = styled(ProjectTwo)`
     padding-left: 0.2em;
     padding-top: 0.1em;
     border-top-right-radius: 8px;
-    font-size: 0.8;
+    font-size: 0.8em;
     font-weight: 600;
     color: #222;
     background-color: white;
