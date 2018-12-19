@@ -8,18 +8,29 @@ function ToDoProjectDesc(props) {
     <p>
     EXAMPLE TEXT! This project combines data from a few different endpoints of the
     world bank API to show either energy production sources as a percentage
-    or in absolute terms. I was trying to illustrate that while a greater
+    or in absolute terms.
+    <br /><br />
+    I was trying to illustrate that while a greater
     of energy is being produced from clean sources that the total energy
-    produced from fossil fuels might still be rising. Data for the UK is
+    produced from fossil fuels might still be rising.
+    <br /><br />
+    Data for the UK is
     always shown, then you can select a second country to compare it to.
+    <br /><br />
     I decided against including a vertical scale for the absolute values for
     two reasons, firstly I think the numbers are meaningless to most people and
     secondly I was trying to keep the chart as simple as possible as it's just
-    made using simple css. The learning objective for me doing this was practice
-    at using an API, not a graphics library. In hindsight, this is not the best way of
+    made using simple css.
+    <br /><br />
+    The learning objective for me doing this was practice
+    at using an API, not a graphics library.
+    <br /><br />
+    In hindsight, this is not the best way of
     displaying the data for energy production in absolute terms. Either I could
     have used a logarithmic scale or I think better yet, a pie chart of
-    which it's area equated to energy amount produced. In that way you could still illustrate
+    which it's area equated to energy amount produced.
+    <br /><br />
+    In that way you could still illustrate
     a comparision between the UK and somewhere else...although you'd need a slider for the year
     perhaps.
     </p>
