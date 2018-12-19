@@ -34,7 +34,7 @@ const StyledToDoContainer = styled(ToDoContainer)`
   padding-top: 1em;
   padding-bottom: 2em;
   border-top: solid ${commonStyles.colorOne} 8px;
-  background-color: #267;
+  background-color: #5591a0;
 
   h2 {
     flex: 0 0 100%;
