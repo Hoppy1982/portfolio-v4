@@ -97,7 +97,7 @@ const StyledToDo = styled(ToDo)`
   @media only screen
     and (min-device-width: 1200px)
     and (min-width: 1200px) {
-      margin-top: 6em;
+      margin-top: 72px;
       margin-right: 16px;
     }
 `

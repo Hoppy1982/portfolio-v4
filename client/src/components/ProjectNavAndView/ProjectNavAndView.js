@@ -23,7 +23,7 @@ class ProjectNavAndView extends Component {
       <div className={this.props.className}>
         <ProjectNav />
         <Switch>
-          <Route path={`${this.props.match.path}/to-do-app`} component={ToDoContainer}/>
+          <Route path={`${this.props.match.path}/to-do-app`} component={ToDoContainer} />
           <Route path={`${this.props.match.path}/particle-alphabet`} component={ProjectOne} />
           <Route path={`${this.props.match.path}/world-bank-api`} component={ProjectTwo} />
         </Switch>

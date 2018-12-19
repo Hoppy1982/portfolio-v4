@@ -7,7 +7,15 @@ import {
   Redirect,
 } from 'react-router-dom'
 import styled from 'styled-components'
+import { library } from '@fortawesome/fontawesome-svg-core'
 
+import  {
+  faGithubSquare,
+  faReact,
+  faJsSquare,
+  faCss3
+} from '@fortawesome/free-brands-svg-icons'
+library.add(faGithubSquare, faReact, faJsSquare, faCss3)
 
 import NotFound from './NotFound'
 import Header from './Header'

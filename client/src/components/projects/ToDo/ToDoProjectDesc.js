@@ -64,6 +64,8 @@ const StyledToDoProjectDesc = styled(ToDoProjectDesc)`
     and (min-device-width: 1200px)
     and (min-width: 1200px) {
       flex: 1 1 400px;
+
+      margin-top: 72px;
     }
 `
 

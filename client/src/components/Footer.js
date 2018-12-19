@@ -2,12 +2,8 @@ import React, { Component } from 'react'
 import {
   NavLink
 } from 'react-router-dom'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import {
-  faGithubSquare,
-  faTwitterSquare
-} from '@fortawesome/fontawesome-free-brands'
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 class Footer extends Component {
@@ -15,10 +11,7 @@ class Footer extends Component {
     return(
       <footer className={this.props.className}>
         <a className='link' href='https://github.com/Hoppy1982'>
-          <FontAwesomeIcon className='link__icon' icon={faGithubSquare} />
-        </a>
-        <a className='link' href='https://twitter.com/Markhopcraft'>
-          <FontAwesomeIcon className='link__icon' icon={faTwitterSquare} />
+          <FontAwesomeIcon icon={['fab', 'github-square']} />
         </a>
       </footer>
     )

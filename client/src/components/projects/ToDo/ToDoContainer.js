@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import ToDo from './ToDo'
 import ToDoProjectDesc from './ToDoProjectDesc'
+import CodeLink from '../../CodeLink'
+import TechUsed from '../../TechUsed'
 import commonStyles from '../../../common-styles'
 
 
@@ -14,7 +16,16 @@ class ToDoContainer extends Component {
   render() {
     return(
       <div className={this.props.className}>
-        <h2>To Do App With Persistant Storage</h2>
+        <div className='title-and-link'>
+          <h2>To Do App With Persistant Storage</h2>
+          <CodeLink url='https://github.com/Hoppy1982/portfolio-v4/tree/master/client/src/components/projects/ToDo' />
+          <TechUsed techs={[
+            {name: 'css', icon: 'css3', key: 0},
+            {name: 'javascript', icon: 'js-square', key: 1},
+            {name: 'react', icon: 'react', key: 2},
+            {name: 'mysql', icon: '', key: 3}
+          ]} />
+        </div>
         <ToDoProjectDesc />
         <ToDo />
       </div>
@@ -36,10 +47,13 @@ const StyledToDoContainer = styled(ToDoContainer)`
   border-top: solid ${commonStyles.colorOne} 8px;
   background-color: #5591a0;
 
-  h2 {
+  .title-and-link {
     flex: 0 0 100%;
     padding-top: 1.5em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media only screen
