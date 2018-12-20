@@ -8,14 +8,14 @@ import {
 } from 'react-router-dom'
 import styled from 'styled-components'
 import { library } from '@fortawesome/fontawesome-svg-core'
-
-import  {
-  faGithubSquare,
-  faReact,
-  faJsSquare,
-  faCss3
-} from '@fortawesome/free-brands-svg-icons'
-library.add(faGithubSquare, faReact, faJsSquare, faCss3)
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons/faGithubSquare'
+import { faReact } from '@fortawesome/free-brands-svg-icons/faReact'
+import { faJsSquare } from '@fortawesome/free-brands-svg-icons/faJsSquare'
+import { faCss3 } from '@fortawesome/free-brands-svg-icons/faCss3'
+import { faHtml5 } from '@fortawesome/free-brands-svg-icons/faHtml5'
+import { faDatabase } from '@fortawesome/free-solid-svg-icons/faDatabase'
+import { faTable } from '@fortawesome/free-solid-svg-icons/faTable'
+library.add(faGithubSquare, faReact, faJsSquare, faCss3, faHtml5, faDatabase, faTable)
 
 import NotFound from './NotFound'
 import Header from './Header'

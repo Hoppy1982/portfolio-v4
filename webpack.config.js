@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   mode: 'development',
@@ -23,7 +24,8 @@ module.exports = {
     }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'production'//defaults to process.env.NODE_ENV being equal to 'localhost' if no environment variable for NODE_ENV exists
-    })
+    }),
+    /*new BundleAnalyzerPlugin()*/
   ],
   output: {
     filename: '[name].bundle.js',

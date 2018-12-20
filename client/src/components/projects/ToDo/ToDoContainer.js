@@ -20,10 +20,10 @@ class ToDoContainer extends Component {
           <h2>To Do App With Persistant Storage</h2>
           <CodeLink url='https://github.com/Hoppy1982/portfolio-v4/tree/master/client/src/components/projects/ToDo' />
           <TechUsed techs={[
-            {name: 'css', icon: 'css3', key: 0},
-            {name: 'javascript', icon: 'js-square', key: 1},
-            {name: 'react', icon: 'react', key: 2},
-            {name: 'mysql', icon: '', key: 3}
+            {name: 'css', icon: 'css3', pack: 'fab', key: 0},
+            {name: 'js', icon: 'js-square', pack: 'fab', key: 1},
+            {name: 'react', icon: 'react', pack: 'fab', key: 2},
+            {name: 'mysql', icon: 'database', pack: 'fas', key: 3}
           ]} />
         </div>
         <ToDoProjectDesc />

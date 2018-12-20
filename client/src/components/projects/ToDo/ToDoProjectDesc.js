@@ -3,38 +3,42 @@ import styled from 'styled-components'
 import commonStyles from '../../../common-styles'
 
 function ToDoProjectDesc(props) {
-  return <div className={props.className}>
-    <h3>Project Description</h3>
+  return <article className={props.className}>
+    <h4>Project Desciption</h4>
     <p>
-    EXAMPLE TEXT! This project combines data from a few different endpoints of the
-    world bank API to show either energy production sources as a percentage
-    or in absolute terms.
-    <br /><br />
-    I was trying to illustrate that while a greater
-    of energy is being produced from clean sources that the total energy
-    produced from fossil fuels might still be rising.
-    <br /><br />
-    Data for the UK is
-    always shown, then you can select a second country to compare it to.
-    <br /><br />
-    I decided against including a vertical scale for the absolute values for
-    two reasons, firstly I think the numbers are meaningless to most people and
-    secondly I was trying to keep the chart as simple as possible as it's just
-    made using simple css.
-    <br /><br />
-    The learning objective for me doing this was practice
-    at using an API, not a graphics library.
-    <br /><br />
-    In hindsight, this is not the best way of
-    displaying the data for energy production in absolute terms. Either I could
-    have used a logarithmic scale or I think better yet, a pie chart of
-    which it's area equated to energy amount produced.
-    <br /><br />
-    In that way you could still illustrate
-    a comparision between the UK and somewhere else...although you'd need a slider for the year
-    perhaps.
+      I made this in vanilla javascript without using any libraries other
+      than React with the idea that it would be good practice at using
+      classes to organise the different particle behaviours. Originally
+      I thought I could use it as full page navigation system. I was going
+      to have the particles form the chosen nav link then all zoom off down
+      a wormhole. They'd then zoom out of wormhole on the destination
+      page and do something else like make an animated pomodoro timer.
+      In the end though I settled on leaving it as a self contained project.
     </p>
-  </div>
+
+    <h4>How It Works</h4>
+    <p>
+      There are 3 particle classes, a super Particle class and then sub
+      classes for HoldPatternParticle & LettersParticle. The 2 particle
+      types live in separate arrays. To transition between behaviour types
+      they're pretty much just popped off one array and onto the other.
+    </p>
+    <p>
+      The hold pattern particles follow cubic bezier curves. Those curves
+      are defined by 4 coordinates, start, end & 2 control points. I used
+      an array of pre-determined waypoints and randomized a little distance
+      from those to get the start and end points. The control points are
+      pretty much randomized inside a square whose diagonals are bound by
+      the start and end points.
+    </p>
+    <p>
+      For the letters particles I created an array of shape objects which
+      specificies the coordinates of each character vertex as a ratio of the
+      space assigned to each character. The space assigned to each character
+      is dependent on the longest word provided. Letter particles are given
+      target vertex to fly to.
+    </p>
+  </article>
 }
 
 
@@ -45,10 +49,10 @@ const StyledToDoProjectDesc = styled(ToDoProjectDesc)`
   font-size: 16px;
   margin-top: 1.5em;
 
-  h3 {
+  h4 {
     margin: ${commonStyles.sideMarginOne};
-    text-align: left;
-    font-size: calc(1.2em + 0.5vw);
+    text-align: center;
+    font-size: calc(1.1em + 0.5vw);
   }
 
   p {

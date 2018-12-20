@@ -10,7 +10,7 @@ function TechUsed(props) {
     if (tech.icon !== '') {
       return <li className='listItem' key={tech.key}>
         <p className='liLeft'>{tech.name}</p>
-        <FontAwesomeIcon className='liRight' icon={['fab', tech.icon]} />
+        <FontAwesomeIcon className='liRight' icon={[tech.pack, tech.icon]} />
       </li>
     }
 
@@ -32,8 +32,22 @@ function TechUsed(props) {
 
 
 const StyledTechUsed = styled(TechUsed)`
+  margin-top: 16px;
+  border: solid 4px ${commonStyles.colorOne};
+  border-radius: 12px;
+  width: 180px;
+  background-color: ${commonStyles.colorOne};
+
+  h4 {
+    color: #fff;
+    text-align: center;
+  }
+
   ul {
     list-style: none;
+    background-color: ${commonStyles.colorOne};
+    color: #fff;
+    margin-top: 4px;
   }
 
   .listItem {
@@ -41,12 +55,12 @@ const StyledTechUsed = styled(TechUsed)`
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    width: 120px;
+    align-items: center;
+    width: 100%;
   }
 
   .liLeft, .liRight {
-    flex: 0 0 100px;
-    border: solid blue 2px;
+    flex: 1 1 50%;
   }
 `
 

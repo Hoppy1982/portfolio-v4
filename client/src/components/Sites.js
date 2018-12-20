@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import commonStyles from '../common-styles'
 import thumbnailCodingRef from '../images/site-coding-reference.png'
 import thumbnailSimon from '../images/simon-link.png'
 import thumbnail2DCarousel from '../images/2d-carousel-link.png'
@@ -62,6 +63,8 @@ class Sites extends Component {
 
 
 const StyledSites = styled(Sites)`
+  ${commonStyles.defaultStyles}
+
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

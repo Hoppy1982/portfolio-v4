@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ProjectTwoCharts from './ProjectTwoCharts'
 import styled from 'styled-components'
+import CodeLink from '../../CodeLink'
+import TechUsed from '../../TechUsed'
 import commonStyles from '../../../common-styles'
 
 
@@ -274,7 +276,17 @@ class ProjectTwo extends Component {
   render() {
     return(
       <div className={this.props.className}>
-        <h2>Energy Production Data From World Bank API</h2>
+
+        <div className='title-and-link'>
+          <h2 className='projectHeading'>Energy Production Data From World Bank API</h2>
+          <CodeLink url='https://github.com/Hoppy1982/portfolio-v4/tree/master/client/src/components/projects/WorldBankAPI' />
+          <TechUsed techs={[
+            {name: 'css', icon: 'css3', pack: 'fab', key: 0},
+            {name: 'js', icon: 'js-square', pack: 'fab', key: 1},
+            {name: 'react', icon: 'react', pack: 'fab', key: 2},
+            {name: 'API', icon: 'table', pack: 'fas', key: 3}
+          ]} />
+        </div>
 
         <div className='projectArticlesAll'>
           <article className='projectArticle'>
@@ -362,15 +374,6 @@ class ProjectTwo extends Component {
 
         <ProjectTwoCharts energyData={this.state.allCountriesData} showPercents={this.state.showPercents}/>
 
-        <div className='stuffUsed'>
-          <h4 className='stuffUsed__heading'>Stuff Used</h4>
-          <ul className='stuffUsed__list'>
-            <li>Html</li>
-            <li>Css</li>
-            <li>Javascript (lots of fetch & promises)</li>
-            <li>React</li>
-          </ul>
-        </div>
       </div>
     )
   }
@@ -387,9 +390,13 @@ const StyledProjectTwo = styled(ProjectTwo)`
   border-top: solid ${commonStyles.colorOne} 8px;
   background-color: #59c66d;
 
-  h2 {
+  .title-and-link {
+    flex: 0 0 100%;
     padding-top: 1.5em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .ProjectTwoControlsLayoutContainer {
@@ -504,25 +511,6 @@ const StyledProjectTwo = styled(ProjectTwo)`
     margin: auto;
     margin-top: 1em;
     font-size: 1.2em;
-  }
-
-  .stuffUsed {
-    margin: 1em;
-  }
-
-  .stuffUsed__heading {
-    text-align: center;
-  }
-
-  .stuffUsed__list {
-    margin-top: 0.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8em;
-    list-style: none;
-    font-weight: 600;
   }
 
   @media screen and (min-width: 480px) {

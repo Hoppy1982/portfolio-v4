@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ParticleAlphabetOne from './ProjectOneParticleAlphabet'
 import styled from 'styled-components'
+import CodeLink from '../../CodeLink'
+import TechUsed from '../../TechUsed'
 import commonStyles from '../../../common-styles'
 
 
@@ -71,7 +73,16 @@ class ProjectOne extends Component {
   render() {
     return(
       <div className={this.props.className}>
-        <h2 className='projectHeading'>Particle Alphabet</h2>
+        <div className='title-and-link'>
+          <h2 className='projectHeading'>Particle Alphabet</h2>
+          <CodeLink url='https://github.com/Hoppy1982/portfolio-v4/tree/master/client/src/components/projects/ParticleAlphabet' />
+          <TechUsed techs={[
+            {name: 'css', icon: 'css3', pack: 'fab', key: 0},
+            {name: 'js', icon: 'js-square', pack: 'fab', key: 1},
+            {name: 'react', icon: 'react', pack: 'fab', key: 2},
+            {name: 'canvas', icon: 'html5', pack: 'fab', key: 3}
+          ]} />
+        </div>
 
         <div className='projectLayout'>
           <div className='canvasAndDescription'>
@@ -109,44 +120,32 @@ class ProjectOne extends Component {
                 page and do something else like make an animated pomodoro timer.
                 In the end though I settled on leaving it as a self contained project.
               </p>
+
+              <h4 className='articleHeading'>How It Works</h4>
+              <p>
+                There are 3 particle classes, a super Particle class and then sub
+                classes for HoldPatternParticle & LettersParticle. The 2 particle
+                types live in separate arrays. To transition between behaviour types
+                they're pretty much just popped off one array and onto the other.
+              </p>
+              <p>
+                The hold pattern particles follow cubic bezier curves. Those curves
+                are defined by 4 coordinates, start, end & 2 control points. I used
+                an array of pre-determined waypoints and randomized a little distance
+                from those to get the start and end points. The control points are
+                pretty much randomized inside a square whose diagonals are bound by
+                the start and end points.
+              </p>
+              <p>
+                For the letters particles I created an array of shape objects which
+                specificies the coordinates of each character vertex as a ratio of the
+                space assigned to each character. The space assigned to each character
+                is dependent on the longest word provided. Letter particles are given
+                target vertex to fly to.
+              </p>
             </article>
           </div>
 
-          <article className='howItWorks'>
-            <h4 className='articleHeading'>How It Works</h4>
-            <p>
-              There are 3 particle classes, a super Particle class and then sub
-              classes for HoldPatternParticle & LettersParticle. The 2 particle
-              types live in separate arrays. To transition between behaviour types
-              they're pretty much just popped off one array and onto the other.
-            </p>
-            <p>
-              The hold pattern particles follow cubic bezier curves. Those curves
-              are defined by 4 coordinates, start, end & 2 control points. I used
-              an array of pre-determined waypoints and randomized a little distance
-              from those to get the start and end points. The control points are
-              pretty much randomized inside a square whose diagonals are bound by
-              the start and end points.
-            </p>
-            <p>
-              For the letters particles I created an array of shape objects which
-              specificies the coordinates of each character vertex as a ratio of the
-              space assigned to each character. The space assigned to each character
-              is dependent on the longest word provided. Letter particles are given
-              target vertex to fly to.
-            </p>
-          </article>
-
-          <div className='stuffUsed'>
-            <h4 className='stuffUsed__heading'>Stuff Used</h4>
-            <ul className='stuffUsed__list'>
-              <li>Html</li>
-              <li>Css</li>
-              <li>Javascript</li>
-              <li>Canvas</li>
-              <li>React</li>
-            </ul>
-          </div>
         </div>
 
       </div>
@@ -170,10 +169,17 @@ const StyledProjectOne = styled(ProjectOne)`
   flex-direction: column;
   justify-content: space-around;
 
+  .title-and-link {
+    flex: 0 0 100%;
+    padding-top: 1.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .projectHeading {
     text-align: center;
-    padding: 1em;
     font-family: lato;
   }
 
@@ -190,6 +196,7 @@ const StyledProjectOne = styled(ProjectOne)`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 32px;
   }
 
   .canvasWrapper {
@@ -265,22 +272,6 @@ const StyledProjectOne = styled(ProjectOne)`
     padding: 0.5em;
   }
 
-  .stuffUsed {
-    margin: 1em;
-  }
-
-  .stuffUsed__heading {}
-
-  .stuffUsed__list {
-    margin-top: 0.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8em;
-    list-style: none;
-    font-weight: 600;
-  }
 
   @media screen and (min-width: 800px) {
     .canvasAndDescription {
@@ -291,9 +282,6 @@ const StyledProjectOne = styled(ProjectOne)`
     .projectDescription {
       margin-left: 5%;
       margin-top: 0px;
-    }
-    .articleHeading {
-      padding-top: 0px;
     }
     .projectLayout {
       width: 90%;
