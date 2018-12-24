@@ -33,7 +33,6 @@ function ToDoProjectDesc(props) {
       objects. Array.map() is used in dynamically generate a react component
       for each array element.
     </p>
-
   </article>
 }
 

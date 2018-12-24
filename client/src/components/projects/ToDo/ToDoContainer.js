@@ -16,6 +16,7 @@ class ToDoContainer extends Component {
   render() {
     return(
       <div className={this.props.className}>
+
         <div className='title-and-link'>
           <h2>To Do App With Persistant Storage</h2>
           <CodeLink url='https://github.com/Hoppy1982/portfolio-v4/tree/master/client/src/components/projects/ToDo' />
@@ -26,8 +27,10 @@ class ToDoContainer extends Component {
             {name: 'mysql', icon: 'database', pack: 'fas', key: 3}
           ]} />
         </div>
+
         <ToDoProjectDesc />
         <ToDo />
+
       </div>
     )
   }
@@ -40,7 +43,7 @@ const StyledToDoContainer = styled(ToDoContainer)`
   flex: 1 1 auto;
   flex-direction: column;
   align-items: center;
-  
+
   width: 100%;
   margin-top: 2em;
   padding-top: 1em;

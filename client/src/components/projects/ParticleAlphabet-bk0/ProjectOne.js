@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ParticleAlphabetOne from './ProjectOneParticleAlphabet'
 import styled from 'styled-components'
-import ParticleAlphabetProjectDesc from './ParticleAlphabetProjectDesc'
 import CodeLink from '../../CodeLink'
 import TechUsed from '../../TechUsed'
 import commonStyles from '../../../common-styles'
@@ -74,9 +73,8 @@ class ProjectOne extends Component {
   render() {
     return(
       <div className={this.props.className}>
-
         <div className='title-and-link'>
-          <h2>Particle Alphabet</h2>
+          <h2 className='projectHeading'>Particle Alphabet</h2>
           <CodeLink url='https://github.com/Hoppy1982/portfolio-v4/tree/master/client/src/components/projects/ParticleAlphabet' />
           <TechUsed techs={[
             {name: 'css', icon: 'css3', pack: 'fab', key: 0},
@@ -86,11 +84,69 @@ class ProjectOne extends Component {
           ]} />
         </div>
 
-        <ParticleAlphabetProjectDesc />
-        {/*<div>
-          <ParticleAlphabetOne />
-          <ParticleAlphabetOneControls />
-        </div>*/}
+        <article className='projectDescription'>
+          <h4 className='articleHeading'>Project Desciption</h4>
+          <p>
+            I made this in vanilla javascript without using any libraries other
+            than React with the idea that it would be good practice at using
+            classes to organise the different particle behaviours.
+          </p>
+          <p>
+            Originally I thought I could use it as full page navigation system.
+          </p>
+          <p>
+            I was going to have the particles form the chosen nav link then all
+            zoom off down a wormhole.
+          </p>
+          <p>
+            They'd then zoom out of wormhole on the destination page and do
+            something else like make an animated pomodoro timer.
+          </p>
+          <p>
+            In the end though I settled on leaving it as a self contained
+            project.
+          </p>
+
+          <h4 className='articleHeading'>How It Works</h4>
+          <p>
+            There are 3 particle classes, a super Particle class and then sub
+            classes for HoldPatternParticle & LettersParticle.
+          </p>
+          <p>
+            The 2 particle types live in separate arrays.
+          </p>
+          <p>
+            To transition between behaviour types they're pretty much just
+            popped off one array and onto the other.
+          </p>
+          <p>
+            The hold pattern particles follow cubic bezier curves.
+          </p>
+          <p>
+            Those curves are defined by 4 coordinates, start, end & 2 control
+            points.
+          </p>
+          <p>
+            I used an array of pre-determined waypoints and randomized a little
+            distance from those to get the start and end points.
+          </p>
+          <p>
+            The control points are pretty much randomized inside a square whose
+            diagonals are bound by the start and end points.
+          </p>
+          <p>
+            For the letters particles I created an array of shape objects which
+            specificies the coordinates of each character vertex as a ratio of
+            the space assigned to each character.
+          </p>
+          <p>
+            The space assigned to each character is dependent on the longest
+            word provided.
+            </p>
+            <p>
+            Letter particles are given target vertex to fly to.
+          </p>
+        </article>
 
         <div className='projectLayout'>
           <div className='canvasAndDescription'>
@@ -104,7 +160,6 @@ class ProjectOne extends Component {
                   renderPaths={this.state.contentOneRenderPaths}
                 />
               </div>
-
               <div className='controls'>
                 <div className='controls__inputContainer'>
                   <div className='controls__inputDesc'>Type in the box:</div>
@@ -115,8 +170,8 @@ class ProjectOne extends Component {
                   <button onClick={this.contentOneHandleTogglePaths} className='controls__button'>Toggle Paths</button>
                 </div>
               </div>
-
             </div>
+
 
           </div>
 
@@ -156,6 +211,10 @@ const StyledProjectOne = styled(ProjectOne)`
     align-items: center;
   }
 
+  .projectHeading {
+    text-align: center;
+    font-family: lato;
+  }
 
   .projectLayout {
     display: flex;
