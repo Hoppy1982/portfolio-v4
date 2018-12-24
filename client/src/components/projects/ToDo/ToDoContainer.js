@@ -40,6 +40,7 @@ const StyledToDoContainer = styled(ToDoContainer)`
   flex: 1 1 auto;
   flex-direction: column;
   align-items: center;
+  
   width: 100%;
   margin-top: 2em;
   padding-top: 1em;

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import canvasHelpers from '../../../utils/canvasHelpers'
 import lettersLib from '../../../utils/lettersLib'
 
+
 import HoldPatternParticle from '../../../classes/HoldPatternParticle'
 import CharPatternParticle from '../../../classes/CharPatternParticle'
 
