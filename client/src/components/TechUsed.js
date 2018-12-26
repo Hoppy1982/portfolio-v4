@@ -22,7 +22,7 @@ function TechUsed(props) {
 
   return (
     <div className={props.className}>
-      <h4>Technolgies Used:</h4>
+      <h4>Technologies Used:</h4>
       <ul>
         {techsAndIcons}
       </ul>
