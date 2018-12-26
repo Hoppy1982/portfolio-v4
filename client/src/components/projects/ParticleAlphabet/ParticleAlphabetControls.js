@@ -2,28 +2,44 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import commonStyles from '../../../common-styles'
 
-function ParticleAlphabetProjectDesc(props) {
-  return <div className={props.className}>
 
-    <div className='controls__top'>
-      <div className='controls__inputDesc'>Type in the box:</div>
-      <input className='controls__input' type="text" value={this.state.value} onChange={this.contentOneHandleTargetWordChange} className='control'></input>
-    </div>
+class ParticleAlphabetControls extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+  render() {
+    return(
+      <div className={this.props.className}>
 
-    <div className='controls__lower'>
-      <button onClick={this.contentOneHandleToggleWP} className='controls__button'>Toggle Waypoints</button>
-      <button onClick={this.contentOneHandleTogglePaths} className='controls__button'>Toggle Paths</button>
-    </div>
+        <div className='controls__top'>
+          <div className='controls__inputDesc'>Type in the box:</div>
+          <input className='controls__input' type="text" value={this.state.value} onChange={this.props.wordChange} className='control'></input>
+        </div>
 
-  </div>
+        <div className='controls__lower'>
+          <button onClick={this.props.toggleWP} className='controls__button'>Toggle Waypoints</button>
+          <button onClick={this.props.togglePaths} className='controls__button'>Toggle Paths</button>
+        </div>
+
+      </div>
+    )
+  }
 }
 
 
 const StyledParticleAlphabetControls = styled(ParticleAlphabetControls)`
-  margin-top: 0.5em;
+  box-sizing: border-box;
+  margin-top: 1em;
   border: solid #222 4px;
-  width: 400px;
   background: #222;
+  width: calc(100% - ${commonStyles.sideMarginOne} - ${commonStyles.sideMarginOne});
+
+  @media only screen
+    and (min-device-width: 700px)
+    and (min-width: 700px) {
+      width: calc(700px - ${commonStyles.sideMarginOne} - ${commonStyles.sideMarginOne})
+    }
 
   .controls__top {
     box-sizing: border-box;

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ParticleAlphabetOne from './ProjectOneParticleAlphabet'
 import styled from 'styled-components'
 import ParticleAlphabetProjectDesc from './ParticleAlphabetProjectDesc'
+import ParticleAlphabetControls from './ParticleAlphabetControls'
 import CodeLink from '../../CodeLink'
 import TechUsed from '../../TechUsed'
 import commonStyles from '../../../common-styles'
@@ -55,12 +56,12 @@ class ProjectOne extends Component {
   updateCanvasDimensions() {
     let desiredWidth
 
-    if(window.innerWidth <= 400) {
-      desiredWidth  =  window.innerWidth * 0.9
+    if(window.visualViewport.width <= 700) {
+      desiredWidth  =  window.visualViewport.width - 32
     }
 
-    if(window.innerWidth > 400) {
-      desiredWidth  =  400
+    if(window.visualViewport.width > 700) {
+      desiredWidth  =  700 - 32
     }
 
 
@@ -87,41 +88,20 @@ class ProjectOne extends Component {
         </div>
 
         <ParticleAlphabetProjectDesc />
-        {/*<div>
-          <ParticleAlphabetOne />
-          <ParticleAlphabetOneControls />
-        </div>*/}
 
-        <div className='projectLayout'>
-          <div className='canvasAndDescription'>
-            <div className='canvasAndControlsContainer'>
-              <div className='canvasWrapper'>
-                <ParticleAlphabetOne
-                  canvasWidth={this.state.contentOneCanvasWidth}
-                  canvasHeight={this.state.contentOneCanvasHeight}
-                  targetWord={this.state.contentOneTargetWord}
-                  renderWaypoints={this.state.contentOneRenderWaypoints}
-                  renderPaths={this.state.contentOneRenderPaths}
-                />
-              </div>
+        <ParticleAlphabetOne
+          canvasWidth={this.state.contentOneCanvasWidth}
+          canvasHeight={this.state.contentOneCanvasHeight}
+          targetWord={this.state.contentOneTargetWord}
+          renderWaypoints={this.state.contentOneRenderWaypoints}
+          renderPaths={this.state.contentOneRenderPaths}
+        />
 
-              <div className='controls'>
-                <div className='controls__inputContainer'>
-                  <div className='controls__inputDesc'>Type in the box:</div>
-                  <input className='controls__input' type="text" value={this.state.value} onChange={this.contentOneHandleTargetWordChange} className='control'></input>
-                </div>
-                <div className='controls__buttonsContainer'>
-                  <button onClick={this.contentOneHandleToggleWP} className='controls__button'>Toggle Waypoints</button>
-                  <button onClick={this.contentOneHandleTogglePaths} className='controls__button'>Toggle Paths</button>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
+        <ParticleAlphabetControls
+          wordChange={this.contentOneHandleTargetWordChange}
+          toggleWP={this.contentOneHandleToggleWP}
+          togglePaths={this.contentOneHandleTogglePaths}
+        />
       </div>
     )
   }
@@ -156,79 +136,6 @@ const StyledProjectOne = styled(ProjectOne)`
     align-items: center;
   }
 
-
-  .projectLayout {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-family: lato;
-  }
-
-  .canvasAndControlsContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 32px;
-  }
-
-  .canvasWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .controls {
-    margin-top: 0.5em;
-    border: solid #222 4px;
-    width: 400px;
-    background: #222;
-  }
-
-  .controls__inputContainer {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 1em;
-  }
-
-  .controls__inputDesc {
-    font-weight: 600;
-    background: #222;
-    color: white;
-    flex: 1 1 auto;
-    width: 40%;
-  }
-
-  input {
-    flex: 1 1 auto;
-    width: 60%;
-    height: 2em;
-    font-size: 1.2em;
-  }
-
-  .controls__buttonsContainer {
-    width: 100%;
-  }
-
-  .controls__button {
-    height: 50px;
-    width: 50%;
-    font-weight: 800;
-    font-size: 1em;
-  }
-
-  .controls__button:hover {
-    background: #222;
-    color: white;
-    cursor: pointer;
-  }
-
   .projectDescription {
     font-size: 16px;
     margin-top: 1.5em;
@@ -244,11 +151,6 @@ const StyledProjectOne = styled(ProjectOne)`
       text-align: left;
       font-size: calc(1.2em + 0.5vw);
     }
-  }
-
-  .canvasAndDescription {
-    display: flex;
-    flex-direction: column;
   }
 
   .articleHeading {
