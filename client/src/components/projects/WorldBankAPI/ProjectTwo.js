@@ -352,7 +352,7 @@ const StyledProjectTwo = styled(ProjectTwo)`
   padding-top: 1em;
   padding-bottom: 2em;
   border-top: solid ${commonStyles.colorOne} 8px;
-  background-color: #59c66d;
+  background-color: #80ed94;
 
   display: flex;
   flex: 1 1 auto;

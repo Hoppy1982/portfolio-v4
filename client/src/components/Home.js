@@ -57,10 +57,10 @@ const StyledHome = styled(Home)`
   }
 
   @media only screen
-    and (min-device-width: 1200px)
-    and (min-width: 1200px) {
+    and (min-device-width: 900px)
+    and (min-width: 900px) {
       flex: 1 1 100%;
-      max-width: 1200px;
+      max-width: 900px;
     }
 `
 
