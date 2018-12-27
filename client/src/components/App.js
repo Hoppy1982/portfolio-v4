@@ -21,7 +21,7 @@ import NotFound from './NotFound'
 import Header from './Header'
 import Footer from './Footer'
 import Home from './Home'
-import Sites from './Sites'
+import Experiments from './Experiments'
 import ProjectNavAndView from './ProjectNavAndView/ProjectNavAndView'
 
 
@@ -37,7 +37,7 @@ class App extends Component {
         <main>
           <Switch>
             <Route exact path='/home' component={Home} />
-            <Route exact path='/sites' component={Sites} />
+            <Route exact path='/experiments' component={Experiments} />
             <Route path='/projects' component={ProjectNavAndView} />
             <Route exact path='/' component={Home} />
           </Switch>

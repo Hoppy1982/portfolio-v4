@@ -7,7 +7,7 @@ import thumbnail2DCarousel from '../images/2d-carousel-link.png'
 import thumbnailCalc from '../images/calculator-link.png'
 
 
-class Sites extends Component {
+class Experiments extends Component {
   render() {
     return(
       <section className={this.props.className}>
@@ -62,7 +62,7 @@ class Sites extends Component {
 }
 
 
-const StyledSites = styled(Sites)`
+const StyledExperiments = styled(Experiments)`
   ${commonStyles.defaultStyles}
 
   box-sizing: border-box;
@@ -145,4 +145,4 @@ const StyledSites = styled(Sites)`
 `
 
 
-export default StyledSites
+export default StyledExperiments
