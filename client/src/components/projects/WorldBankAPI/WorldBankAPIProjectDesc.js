@@ -10,35 +10,35 @@ function WorldBankAPIProjectDesc(props) {
       This project combines data from a few different endpoints of the world
       bank API to show either energy production sources as a percentage or in
       absolute terms.
-    <p>
     </p>
+    <p>
       I was trying to illustrate that while a greater of energy is being
       produced from clean sources that the total energy produced from fossil
       fuels might still be rising.
-    <p>
     </p>
+    <p>
       Data for the UK is always shown, then you can select a second country to
       compare it to.
-    <p>
     </p>
+    <p>
       I decided against including a vertical scale for the absolute values for
       two reasons, firstly I think the numbers are meaningless to most people
       and secondly I was trying to keep the chart as simple as possible as it's
       just made using simple css.
-    <p>
     </p>
+    <p>
       The learning objective for me doing this was practice at using an API, not
       a graphics library.
-    <p>
     </p>
+    <p>
       In hindsight, this is not the best way of displaying the data for energy
       production in absolute terms.
-    <p>
     </p>
+    <p>
       Either I could have used a logarithmic scale or I think better yet, a pie
       chart of which it's area equated to energy amount produced.
-    <p>
     </p>
+    <p>
       In that way you could still illustrate a comparision between the UK and
       somewhere else...although you'd need a slider for the year perhaps.
     </p>
@@ -47,33 +47,33 @@ function WorldBankAPIProjectDesc(props) {
     <p>
       The world bank API has loads of good information but finding the specific
       data I wanted was a pain.
-    <p>
     </p>
+    <p>
       I used several different fetch calls and then combined the responses.
-    <p>
     </p>
+    <p>
       For example one fetch was used to get population data for each country,
       then another for energy consumption per capita.
-    <p>
     </p>
+    <p>
       They were combined to get total energy usage per country.
-    <p>
     </p>
+    <p>
       In total 6 separate fetch requests are made (consumption per capita,
       population, percentage energy produced from solar & wind combined,
       percentage from hydro, percentage from nuclear and percentage from fossil
       fuels).
-    <p>
     </p>
+    <p>
       There must be some other energy sources, such as burning rubbish that I
       didn't account for so the percentage columns have a slight variation in
       height.
-    <p>
     </p>
+    <p>
       That could be fixed by including an 'other sources' block when I get
       around to it.
-    <p>
     </p>
+    <p>
       I used promise.all to harvest up all the different responses before doing
       the mathsy stuff.
     </p>

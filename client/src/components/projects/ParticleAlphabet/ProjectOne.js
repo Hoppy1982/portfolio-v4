@@ -111,11 +111,6 @@ class ProjectOne extends Component {
 const StyledProjectOne = styled(ProjectOne)`
   ${commonStyles.defaultStyles}
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  //justify-content: space-around;
-
-  display: flex;
   flex: 1 1 auto;
   flex-direction: column;
   align-items: center;

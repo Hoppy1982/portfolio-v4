@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import commonStyles from '../../../common-styles'
 
 
 class ProjectTwoCharts extends Component {
@@ -141,12 +142,13 @@ function RenderAbsolutesBar(props) {
 
 const StyledProjectTwoCharts = styled(ProjectTwoCharts)`
   box-sizing: border-box;
+  width: 100%;
 
   .chart {
     background-color: #fff;
     border: solid #222 2px;
     border-top-right-radius: 24px;
-    width: 94%;
+    width: calc(100% - ${commonStyles.sideMarginOne} - ${commonStyles.sideMarginOne});
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;

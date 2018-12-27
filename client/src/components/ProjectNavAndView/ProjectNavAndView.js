@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 import styled from 'styled-components'
 import ProjectNav from './ProjectNav/ProjectNav'
-import ToDo from './../projects/ToDo/ToDo'
+import ProjectsDesc from './ProjectsDesc'
 import ProjectOne from './../projects/ParticleAlphabet/ProjectOne'
 import ProjectTwo from './../projects/WorldBankAPI/ProjectTwo'
 import ToDoContainer from './../projects/ToDo/ToDoContainer'
@@ -26,6 +26,7 @@ class ProjectNavAndView extends Component {
           <Route path={`${this.props.match.path}/to-do-app`} component={ToDoContainer} />
           <Route path={`${this.props.match.path}/particle-alphabet`} component={ProjectOne} />
           <Route path={`${this.props.match.path}/world-bank-api`} component={ProjectTwo} />
+          <Route path={`${this.props.match.path}`} component={ProjectsDesc}/>
         </Switch>
       </div>
     )

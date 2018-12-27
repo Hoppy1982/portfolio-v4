@@ -10,6 +10,7 @@ class Nav extends Component {
     return(
       <nav className={this.props.className}>
         <NavLink to='/home' activeClassName='active' exact={true} className='navbar__link'>Home</NavLink>
+        <NavLink to='/about' activeClassName='active' exact={true} className='navbar__link'>About</NavLink>
         <NavLink to='/projects' activeClassName='active' className='navbar__link'>Projects</NavLink>
         <NavLink to='/experiments' activeClassName='active' className='navbar__link'>Experiments</NavLink>
       </nav>
@@ -32,13 +33,13 @@ const StyledNav = styled(Nav)`
 
 
   .navbar__link {
-    flex: 0 1 auto;
+    flex: 0 1 180px;
     list-style: none;
     height: 2em;
-    font-size: calc(0.8em + 1vw);
+    font-size: calc(0.7em + 1vw);
     line-height: 2em;
-    margin-left: ${commonStyles.sideMarginOne};
-    margin-right: ${commonStyles.sideMarginOne};
+    margin-left: 6px;
+    margin-right: 6px;
     background: #ddd;
     color: ${commonStyles.colorOne};
     font-weight: 600;
