@@ -63,9 +63,7 @@ const StyledToDoContainer = styled(ToDoContainer)`
   @media only screen
     and (min-device-width: 1200px)
     and (min-width: 1200px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: flex-start;
+
     }
 `
 

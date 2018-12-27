@@ -104,9 +104,8 @@ const StyledParticleAlphabetProjectDesc = styled(ParticleAlphabetProjectDesc)`
   @media only screen
     and (min-device-width: 1200px)
     and (min-width: 1200px) {
-      flex: 1 1 400px;
-
-      margin-top: 72px;
+      flex: 1 1 100%;
+      max-width: 1200px;
     }
 `
 
